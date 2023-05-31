@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="./js/scripts.js" type="module"></script>
+    <title>Primer Parcial</title>
+  </head>
+  <body>
+    <nav>
+        <div>
+            <img src="./img/cape.svg" alt="Logo" />
+        </div>
+        <div>
+            <a href="index.html" title="home"><li>Home</li></a>
+            <a href="personajes.html" title="personajes"><li>Personajes</li></a>
+            <a href="blog.html"><li>Blog</li></a>
+            <a href="contact.html"><li>Contacto</li></a>
+            <a href="#footer"><li>Seguínos en redes</li></a>
+        </div>
+    </nav>
+    <section id="alta-heroe">
+        <h2>Informacion del superheroe</h2>
+    <fieldset>
+      <form id="formAlta">
+        <div>
+            <p class="campo-form-alta" required>Nombre:</p>
+            <input class="inputTxt"  placeholder="Nombre" type="text" name="txtNombre" required />
+        </div>
+        <div>
+            <p class="campo-form-alta">Alias:</p>
+            <input class="inputTxt"  placeholder="Alias" type="text" name="txtAlias" aria-placeholder="Ingrese alter-ego"/>
+        </div>
+        <div>
+            <p class="campo-form-alta" required>Editorial:</p>
+            <input type="radio" name="rdoEditorial" value="marvel" required /><img class="img" src="./img/Marvel_Logo.svg.png" width="10%" alt="Marvel">
+            <br />
+            <input type="radio" name="rdoEditorial" value="dc" required /><img class="img" src="./img/DC_Comics_logo.png" width="10%" alt="DC">
+            <br />
+        </div>
+        <div>
+            <p class="campo-form-alta">Fuerza:</p>
+            <input type="range" id="fuerza" name="rngFuerza"
+            min="0" max="100" required>
+            <label for="fuerza">Fuerza</label>
+            </div>
+
+       <div>
+            <p class="campo-form-alta">Arma:</p>
+            <select id="select-arma" name="selectArma" required>
+            </select>
+        </div>
+        <div>
+            <input type="hidden" name="txtId">
+        </div>
+        </fieldset>
+
+        <div>
+            <button id="btnGuardar"  type="submit">Guardar</button>
+            <hr>
+          </div>
+    </form>
+
+    </section>
+    <div class="botones-seccion">
+        <input id="btnGuardarUpdate" class="boton-tabla-heroes" type="submit" value="Guardar" disabled>
+        <input id="btnEliminar" class="boton-tabla-heroes" type="submit" value="Eliminar" disabled>
+        <input id="btnCancelar" class="boton-tabla-heroes" type="submit" value="Cancelar" disabled>
+    </div>
+    <div class="spinner"></div>
+
+    <section id="tabla-heroes" class="tabla-heroes">          
+        <div id="idTabla"></div>
+    </section>
+                                    
+  </body>
+  <!--<footer id="footer">
+    <iframe id="iframe-footer" name="iframe-footer" src="footer.html" scrolling = "no"></iframe>
+  </footer>-->
+</html>
